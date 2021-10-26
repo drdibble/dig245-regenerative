@@ -1,2 +1,37 @@
 
 /* css */
+body {
+  background-color: #89D070;
+}
+
+.endzone {
+  background-color: #7284A8;
+  padding: 3px;
+}
+
+.play_text {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.yard_line {
+  border:none;
+  border-bottom:5px solid #000;
+  height:10px;
+  width:100%;
+  padding: 200px;
+}
+
+.big_script {
+  font-size: 36px;
+}
