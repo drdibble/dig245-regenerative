@@ -14,13 +14,36 @@ body {
   padding: 3px;
 }
 
+.intro {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  display: none;
+}
+
 .tick {
-  background-color: black;
+  background-color: white;
   position: absolute;
   width: 24px;
   height: 6px;
-  top: 310px;
-  left: 0px;
+}
+
+.yard_mark_left {
+  color: white;
+  transform: rotate(-270deg);
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 40px;
+}
+
+.yard_mark_right {
+  color: white;
+  transform: rotate(-90deg);
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 40px;
 }
 
 .play_text {
@@ -39,19 +62,19 @@ body {
 }
 
 .yellow_line {
+  position: absolute;
   border:none;
   border-bottom:5px solid yellow;
-  height:10px;
+  height:6px;
   width:100%;
-  padding: 200px;
 }
 
 .yard_line {
+  position: absolute;
   border:none;
   border-bottom:5px solid #000;
-  height:10px;
+  height:6px;
   width:100%;
-  padding: 200px;
 }
 
 .big_script {

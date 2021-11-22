@@ -125,8 +125,8 @@ function reset_game() {
   yard_to_gain = 10;
   play = 'normal';
   last_play = '';
-  $( ".yard_line" ).css("padding", yard_to_gain*20);
-  $( ".yellow_line" ).css( "padding", (yard*20)-(10*20));
+  $( ".yard_line" ).css("top", String((yard*20)+135)+"px");
+  $( ".yellow_line" ).css( "top", String((yard*20)-(10*20)+135)+"px");
   document.getElementById("down").innerHTML = down + " down and " + yard_to_gain + " from the " + yard;
   document.getElementById("last_play").innerHTML = '';
   document.getElementById("play_again").innerHTML = '';
@@ -230,7 +230,7 @@ function pass() {
           last_play = 'Touchdown!';
           break;
         } else if (yard_to_gain <= 0){
-          $( ".yellow_line" ).css( "padding", (yard*20)-(10*20));
+          $( ".yellow_line" ).css( "top", String((yard*20)-(10*20)+135)+"px");
           down = "First";
           if(yard <= 10){
             yard_to_gain = yard;
@@ -248,7 +248,7 @@ function pass() {
           last_play = 'Touchdown!';
           break;
         } else if (yard_to_gain <= 0){
-          $( ".yellow_line" ).css( "padding", (yard*20)-(10*20));
+          $( ".yellow_line" ).css( "top", String((yard*20)-(10*20)+135)+"px");
           down = "First";
           if(yard <= 10){
             yard_to_gain = yard;
@@ -266,7 +266,7 @@ function pass() {
           last_play = 'Touchdown!';
           break;
         } else if (yard_to_gain <= 0){
-          $( ".yellow_line" ).css( "padding", (yard*20)-(10*20));
+          $( ".yellow_line" ).css( "top", String((yard*20)-(10*20)+135)+"px");
           down = "First";
           if(yard <= 10){
             yard_to_gain = yard;
@@ -284,7 +284,7 @@ function pass() {
           last_play = 'Touchdown!';
           break;
         } else if (yard_to_gain <= 0){
-          $( ".yellow_line" ).css( "padding", (yard*20)-(10*20));
+          $( ".yellow_line" ).css( "top", String((yard*20)-(10*20)+135)+"px");
           down = "First";
           if(yard <= 10){
             yard_to_gain = yard;
@@ -298,7 +298,7 @@ function pass() {
         break;
     }
     if (last_play !== 'Fumble...' && last_play !== 'Interception...' && last_play !== 'Touchdown!' && last_play !== 'Turnover on downs...'){
-      $( ".yard_line" ).css( "padding", yard_to_gain*20);
+      $( ".yard_line" ).css("top", String((yard*20)+135)+"px");
       if(yard_to_gain == yard){
         document.getElementById("down").innerHTML = down + " down and goal from the " + yard;
       } else {
@@ -433,7 +433,7 @@ function run() {
           last_play = 'Touchdown!';
           break;
         } else if (yard_to_gain <= 0){
-          $( ".yellow_line" ).css( "padding", (yard*20)-(10*20));
+          $( ".yellow_line" ).css( "top", String((yard*20)-(10*20)+135)+"px");
           down = "First";
           if(yard <= 10){
             yard_to_gain = yard;
@@ -451,7 +451,7 @@ function run() {
           last_play = 'Touchdown!';
           break;
         } else if (yard_to_gain <= 0){
-          $( ".yellow_line" ).css( "padding", (yard*20)-(10*20));
+          $( ".yellow_line" ).css( "top", String((yard*20)-(10*20)+135)+"px");
           down = "First";
           if(yard <= 10){
             yard_to_gain = yard;
@@ -469,7 +469,7 @@ function run() {
           last_play = 'Touchdown!';
           break;
         } else if (yard_to_gain <= 0){
-          $( ".yellow_line" ).css( "padding", (yard*20)-(10*20));
+          $( ".yellow_line" ).css( "top", String((yard*20)-(10*20)+135)+"px");
           down = "First";
           if(yard <= 10){
             yard_to_gain = yard;
@@ -487,7 +487,7 @@ function run() {
           last_play = 'Touchdown!';
           break;
         } else if (yard_to_gain <= 0){
-          $( ".yellow_line" ).css( "padding", (yard*20)-(10*20));
+          $( ".yellow_line" ).css( "top", String((yard*20)-(10*20)+135)+"px");
           down = "First";
           if(yard <= 10){
             yard_to_gain = yard;
@@ -501,7 +501,7 @@ function run() {
         break;
     }
     if (last_play !== 'Fumble...' && last_play !== 'Interception...' && last_play !== 'Touchdown!' && last_play !== 'Turnover on downs...'){
-      $( ".yard_line" ).css( "padding", yard_to_gain*20);
+      $( ".yard_line" ).css("top", String((yard*20)+135)+"px");
       if(yard_to_gain == yard){
         document.getElementById("down").innerHTML = down + " down and goal from the " + yard;
       } else {
