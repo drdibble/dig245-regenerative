@@ -1,12 +1,26 @@
 
 /* css */
+
 body {
   background-color: #89D070;
+}
+
+.white {
+  background-color: white;
 }
 
 .endzone {
   background-color: #7284A8;
   padding: 3px;
+}
+
+.tick {
+  background-color: black;
+  position: absolute;
+  width: 24px;
+  height: 6px;
+  top: 310px;
+  left: 0px;
 }
 
 .play_text {
@@ -22,6 +36,14 @@ body {
 
 .right {
   text-align: right;
+}
+
+.yellow_line {
+  border:none;
+  border-bottom:5px solid yellow;
+  height:10px;
+  width:100%;
+  padding: 200px;
 }
 
 .yard_line {
