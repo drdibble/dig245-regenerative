@@ -15,37 +15,37 @@ Switch statement based on downs
 */
 
 let schedules = {
-'ARI': ['TEN', 'MIN', 'JAX', 'LAR', 'SF', 'CLE', 'HOU', 'GB', 'SF', 'CAR', 'SEA', 'CHI', 'LAR', 'DET', 'IND', 'DAL', 'SEA'],
+'ARI': ['TEN', 'MIN', 'JAX', 'LA', 'SF', 'CLE', 'HOU', 'GB', 'SF', 'CAR', 'SEA', 'CHI', 'LA', 'DET', 'IND', 'DAL', 'SEA'],
 'ATL': ['PHI', 'TB', 'NYG', 'WSH', 'NYJ', 'MIA', 'CAR', 'NO', 'DAL', 'NE', 'JAX', 'TB', 'CAR', 'SF', 'DET', 'BUF', 'NO'],
-'BAL': ['LV', 'KC', 'DET', 'DEN', 'IND', 'LAC', 'CIN', 'MIN', 'MIA', 'CHI', 'CLE', 'PIT', 'CLE', 'GB', 'CIN', 'LAR', 'PIT'],
+'BAL': ['LV', 'KC', 'DET', 'DEN', 'IND', 'LAC', 'CIN', 'MIN', 'MIA', 'CHI', 'CLE', 'PIT', 'CLE', 'GB', 'CIN', 'LA', 'PIT'],
 'BUF': ['PIT', 'MIA', 'WSH', 'HOU', 'KC', 'TEN', 'MIA', 'JAX', 'NYJ', 'IND', 'NO', 'NE', 'TB', 'CAR', 'NE', 'ATL', 'NYJ'],
 'CAR': ['NYJ', 'NO', 'HOU', 'DAL', 'PHI', 'MIN', 'NYG', 'ATL', 'NE', 'ARI', 'WSH', 'MIA', 'ATL', 'BUF', 'TB', 'NO', 'TB'],
-'CHI': ['LAR', 'CIN', 'CLE', 'DET', 'LV', 'GB', 'TB', 'SF', 'PIT', 'BAL', 'DET', 'ARI', 'GB', 'MIN', 'SEA', 'NYG', 'MIN'],
+'CHI': ['LA', 'CIN', 'CLE', 'DET', 'LV', 'GB', 'TB', 'SF', 'PIT', 'BAL', 'DET', 'ARI', 'GB', 'MIN', 'SEA', 'NYG', 'MIN'],
 'CIN': ['MIN', 'CHI', 'PIT', 'JAX', 'GB', 'DET', 'BAL', 'NYJ', 'CLE', 'LV', 'PIT', 'LAC', 'SF', 'DEN', 'BAL', 'KC', 'CLE'],
 'CLE': ['KC', 'HOU', 'CHI', 'MIN', 'LAC', 'ARI', 'DEN', 'PIT', 'CIN', 'NE', 'DET', 'BAL', 'BAL', 'LV', 'GB', 'PIT', 'CIN'],
 'DAL': ['TB', 'LAC', 'PHI', 'CAR', 'NYG', 'NE', 'MIN', 'DEN', 'ATL', 'KC', 'LV', 'NO', 'WSH', 'NYG', 'WSH', 'ARI', 'PHI'],
 'DEN': ['NYG', 'JAX', 'NYJ', 'BAL', 'PIT', 'LV', 'CLE', 'WSH', 'DAL', 'PHI', 'LAC', 'KC', 'DET', 'CIN', 'LV', 'LAC', 'KC'],
-'DET': ['SF', 'GB', 'BAL', 'CHI', 'MIN', 'CIN', 'LAR', 'PHI', 'PIT', 'CLE', 'CHI', 'MIN', 'DEN', 'ARI', 'ATL', 'SEA', 'GB'],
-'GB': ['NO', 'DET', 'SF', 'PIT', 'CIN', 'CHI', 'WSH', 'ARI', 'KC', 'SEA', 'MIN', 'LAR', 'CHI', 'BAL', 'CLE', 'MIN', 'DET'],
-'HOU': ['JAX', 'CLE', 'CAR', 'BUF', 'NE', 'IND', 'ARI', 'LAR', 'MIA', 'TEN', 'NYJ', 'IND', 'SEA', 'JAX', 'LAC', 'SF', 'TEN'],
-'IND': ['SEA', 'LAR', 'TEN', 'MIA', 'BAL', 'HOU', 'SF', 'TEN', 'NYJ', 'JAX', 'BUF', 'TB', 'HOU', 'NE', 'ARI', 'LV', 'JAX'],
-'JAX': ['HOU', 'DEN', 'ARI', 'CIN', 'TEN', 'MIA', 'SEA', 'BUF', 'IND', 'SF', 'ATL', 'LAR', 'TEN', 'HOU', 'NYJ', 'NE', 'IND'],
+'DET': ['SF', 'GB', 'BAL', 'CHI', 'MIN', 'CIN', 'LA', 'PHI', 'PIT', 'CLE', 'CHI', 'MIN', 'DEN', 'ARI', 'ATL', 'SEA', 'GB'],
+'GB': ['NO', 'DET', 'SF', 'PIT', 'CIN', 'CHI', 'WSH', 'ARI', 'KC', 'SEA', 'MIN', 'LA', 'CHI', 'BAL', 'CLE', 'MIN', 'DET'],
+'HOU': ['JAX', 'CLE', 'CAR', 'BUF', 'NE', 'IND', 'ARI', 'LA', 'MIA', 'TEN', 'NYJ', 'IND', 'SEA', 'JAX', 'LAC', 'SF', 'TEN'],
+'IND': ['SEA', 'LA', 'TEN', 'MIA', 'BAL', 'HOU', 'SF', 'TEN', 'NYJ', 'JAX', 'BUF', 'TB', 'HOU', 'NE', 'ARI', 'LV', 'JAX'],
+'JAX': ['HOU', 'DEN', 'ARI', 'CIN', 'TEN', 'MIA', 'SEA', 'BUF', 'IND', 'SF', 'ATL', 'LA', 'TEN', 'HOU', 'NYJ', 'NE', 'IND'],
 'KC': ['CLE', 'BAL', 'LAC', 'PHI', 'BUF', 'WSH', 'TEN', 'NYG', 'GB', 'LV', 'DAL', 'DEN', 'LV', 'LAC', 'PIT', 'CIN', 'DEN'],
 'LV': ['BAL', 'PIT', 'MIA', 'LAC', 'CHI', 'DEN', 'PHI', 'NYG', 'KC', 'CIN', 'DAL', 'WSH', 'KC', 'CLE', 'DEN', 'IND', 'LAC'],
-'LAR': ['CHI', 'IND', 'TB', 'ARI', 'SEA', 'NYG', 'DET', 'HOU', 'TEN', 'SF', 'GB', 'JAX', 'ARI', 'SEA', 'MIN', 'BAL', 'SF'],
+'LA': ['CHI', 'IND', 'TB', 'ARI', 'SEA', 'NYG', 'DET', 'HOU', 'TEN', 'SF', 'GB', 'JAX', 'ARI', 'SEA', 'MIN', 'BAL', 'SF'],
 'LAC': ['WSH', 'DAL', 'KC', 'LV', 'CLE', 'BAL', 'NE', 'PHI', 'MIN', 'PIT', 'DEN', 'CIN', 'NYG', 'KC', 'HOU', 'DEN', 'LV'],
 'MIA': ['NE', 'BUF', 'LV', 'IND', 'TB', 'JAX', 'ATL', 'BUF', 'HOU', 'BAL', 'NYJ', 'CAR', 'NYG', 'NYJ', 'NO', 'TEN', 'NE'],
-'MIN': ['CIN', 'ARI', 'SEA', 'CLE', 'DET', 'CAR', 'DAL', 'BAL', 'LAC', 'GB', 'SF', 'DET', 'PIT', 'CHI', 'LAR', 'GB', 'CHI'],
+'MIN': ['CIN', 'ARI', 'SEA', 'CLE', 'DET', 'CAR', 'DAL', 'BAL', 'LAC', 'GB', 'SF', 'DET', 'PIT', 'CHI', 'LA', 'GB', 'CHI'],
 'NE': ['MIA', 'NYJ', 'NO', 'TB', 'HOU', 'DAL', 'NYJ', 'LAC', 'CAR', 'CLE', 'ATL', 'TEN', 'BUF', 'IND', 'BUF', 'JAX', 'MIA'],
 'NO': ['GB', 'CAR', 'NE', 'NYG', 'WSH', 'SEA', 'TB', 'ATL', 'TEN', 'PHI', 'BUF', 'DAL', 'NYJ', 'TB', 'MIA', 'CAR', 'ATL'],
-'NYG': ['DEN', 'WSH', 'ATL', 'NO', 'DAL', 'LAR', 'CAR', 'KC', 'LV', 'TB', 'PHI', 'MIA', 'LAC', 'DAL', 'PHI', 'CHI', 'WSH'],
+'NYG': ['DEN', 'WSH', 'ATL', 'NO', 'DAL', 'LA', 'CAR', 'KC', 'LV', 'TB', 'PHI', 'MIA', 'LAC', 'DAL', 'PHI', 'CHI', 'WSH'],
 'NYJ': ['CAR', 'NE', 'DEN', 'TEN', 'ATL', 'NE', 'CIN', 'IND', 'BUF', 'MIA', 'HOU', 'PHI', 'NO', 'MIA', 'JAX', 'TB', 'BUF'],
 'PHI': ['ATL', 'SF', 'DAL', 'KC', 'CAR', 'TB', 'LV', 'DET', 'LAC', 'DEN', 'NO', 'NYG', 'NYJ', 'WSH', 'NYG', 'WSH', 'DAL'],
 'PIT': ['BUF', 'LV', 'CIN', 'GB', 'DEN', 'SEA', 'CLE', 'CHI', 'DET', 'LAC', 'CIN', 'BAL', 'MIN', 'TEN', 'KC', 'CLE', 'BAL'],
-'SF': ['DET', 'PHI', 'GB', 'SEA', 'ARI', 'IND', 'CHI', 'ARI', 'LAR', 'JAX', 'MIN', 'SEA', 'CIN', 'ATL', 'TEN', 'HOU', 'LAR'],
-'SEA': ['IND', 'TEN', 'MIN', 'SF', 'LAR', 'PIT', 'NO', 'JAX', 'GB', 'ARI', 'WSH', 'SF', 'HOU', 'LAR', 'CHI', 'DET', 'ARI'],
-'TB': ['DAL', 'ATL', 'LAR', 'NE', 'MIA', 'PHI', 'CHI', 'NO', 'WSH', 'NYG', 'IND', 'ATL', 'BUF', 'NO', 'CAR', 'NYJ', 'CAR'],
-'TEN': ['ARI', 'SEA', 'IND', 'NYJ', 'JAX', 'BUF', 'KC', 'IND', 'LAR', 'NO', 'HOU', 'NE', 'JAX', 'PIT', 'SF', 'MIA', 'HOU'],
+'SF': ['DET', 'PHI', 'GB', 'SEA', 'ARI', 'IND', 'CHI', 'ARI', 'LA', 'JAX', 'MIN', 'SEA', 'CIN', 'ATL', 'TEN', 'HOU', 'LA'],
+'SEA': ['IND', 'TEN', 'MIN', 'SF', 'LA', 'PIT', 'NO', 'JAX', 'GB', 'ARI', 'WSH', 'SF', 'HOU', 'LA', 'CHI', 'DET', 'ARI'],
+'TB': ['DAL', 'ATL', 'LA', 'NE', 'MIA', 'PHI', 'CHI', 'NO', 'WSH', 'NYG', 'IND', 'ATL', 'BUF', 'NO', 'CAR', 'NYJ', 'CAR'],
+'TEN': ['ARI', 'SEA', 'IND', 'NYJ', 'JAX', 'BUF', 'KC', 'IND', 'LA', 'NO', 'HOU', 'NE', 'JAX', 'PIT', 'SF', 'MIA', 'HOU'],
 'WSH': ['LAC', 'NYG', 'BUF', 'ATL', 'NO', 'KC', 'GB', 'DEN', 'TB', 'CAR', 'SEA', 'LV', 'DAL', 'PHI', 'DAL', 'PHI', 'NYG']
 };
 
@@ -86,12 +86,21 @@ let team_to_abbr = {
 
 
 
-// var select = document.getElementById("selectTeam");
-//
-// for(let team in team_to_abbr) {
-//     select.innerHTML += "<option value=\"" + team + "\">" + team + "</option>";
-// }
-// var value = select.options[select.selectedIndex].value;
+var select = document.getElementById("selectTeam");
+
+for(let team in team_to_abbr) {
+    select.innerHTML += "<option value=\"" + team + "\">" + team + "</option>";
+}
+
+document.getElementById('submit').addEventListener('click', function () {
+    $(".intro").css("display", "none");
+    var value = select.options[select.selectedIndex].value;
+    console.log(value);
+});
+
+document.getElementById('yard_line').scrollIntoView({
+    behavior: 'smooth'
+});
 
 
 
@@ -110,7 +119,7 @@ let myTeam = 'Tennessee Titans';
 //
 // add gametracker variable
 // based on gametracker variable, update probabilities of each yardage gained by taking schedule[myteam_abbr][gametracker] to get probabilities for opposing team
-console.log(team_prob_run[schedules[team_to_abbr[myTeam]][0]][0]);
+
 
 let down = 'First';
 let yard = 50;
@@ -118,8 +127,17 @@ let yard_to_gain = 10;
 let play = 'normal';
 let random = Math.random();
 let last_play = '';
+let game_tracker = 0;
+let wins = 0;
+let losses = 0;
+let record = wins + '-' + losses;
 
 function reset_game() {
+  record = wins + '-' + losses;
+  document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+  console.log(game_tracker);
+  console.log(schedules[team_to_abbr[myTeam]][game_tracker]);
+  console.log(record);
   down = 'First';
   yard = 50;
   yard_to_gain = 10;
@@ -132,90 +150,92 @@ function reset_game() {
   document.getElementById("play_again").innerHTML = '';
   $( ".yellow_line" ).css( "display", "block");
   $( ".yard_line" ).css( "display", "block");
-  $( ".big_script" ).css( "padding-top", 0);
+  $( ".big_script" ).css( "margin-top", 0);
   $( ".big_script" ).css( "font-size", "36px");
 }
+
+
 
 function pass() {
   if (last_play !== 'Fumble...' && last_play !== 'Interception...' && last_play !== 'Touchdown!' && last_play !== 'Turnover on downs...'){
     random = Math.random();
-    if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][0]) {
+    if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][0]) {
       last_play = "Interception...";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][1]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][1]) {
       yard += 5;
       yard_to_gain += 5;
       last_play = "Sack! Loss of 5 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][2]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][2]) {
       yard += 4;
       yard_to_gain += 4;
       last_play = "Sack! Loss of 4 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][3]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][3]) {
       yard += 3;
       yard_to_gain += 3;
       last_play = "Sack! Loss of 3 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][4]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][4]) {
       yard += 2;
       yard_to_gain += 2;
       last_play = "Sack! Loss of 2 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][5]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][5]) {
       yard += 1;
       yard_to_gain += 1;
       last_play = "Sack! Loss of 1 yard.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][6]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][6]) {
       last_play = "Incomplete pass. Gain of 0 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][7]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][7]) {
       yard -= 1;
       yard_to_gain -= 1;
       last_play = "Completed pass. Gain of 1 yard.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][8]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][8]) {
       yard -= 2;
       yard_to_gain -= 2;
       last_play = "Completed pass. Gain of 2 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][9]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][9]) {
       yard -= 3;
       yard_to_gain -= 3;
       last_play = "Completed pass. Gain of 3 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][10]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][10]) {
       yard -= 4;
       yard_to_gain -= 4;
       last_play = "Completed pass. Gain of 4 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][11]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][11]) {
       yard -= 5;
       yard_to_gain -= 5;
       last_play = "Completed pass. Gain of 5 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][12]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][12]) {
       yard -= 6;
       yard_to_gain -= 6;
       last_play = "Completed pass. Gain of 6 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][13]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][13]) {
       yard -= 7;
       yard_to_gain -= 7;
       last_play = "Completed pass. Gain of 7 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][14]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][14]) {
       yard -= 8;
       yard_to_gain -= 8;
       last_play = "Completed pass. Gain of 8 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][15]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][15]) {
       yard -= 9;
       yard_to_gain -= 9;
       last_play = "Completed pass. Gain of 9 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][16]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][16]) {
       yard -= 10;
       yard_to_gain -= 10;
       last_play = "Completed pass. Gain of 10 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][17]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][17]) {
       yard -= 11;
       yard_to_gain -= 11;
       last_play = "Completed pass. Gain of 11 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][18]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][18]) {
       yard -= 12;
       yard_to_gain -= 12;
       last_play = "Completed pass. Gain of 12 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][19]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][19]) {
       yard -= 13;
       yard_to_gain -= 13;
       last_play = "Completed pass. Gain of 13 yards.";
-    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][0]][20]) {
+    } else if (random <= team_prob_pass[schedules[team_to_abbr[myTeam]][game_tracker]][20]) {
       yard -= 14;
       yard_to_gain -= 14;
       last_play = "Completed pass. Gain of 14 yards.";
@@ -315,12 +335,16 @@ function pass() {
       document.getElementById("down").innerHTML = last_play;
       document.getElementById("last_play").innerHTML = '';
       if (last_play == 'Touchdown!') {
-        document.getElementById("play_again").innerHTML = 'You win! Click reset game to play again.';
+        document.getElementById("play_again").innerHTML = 'You win! Click reset game to play the next game on the schedule.';
+        game_tracker++;
+        wins++;
       } else {
-        document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play again.';
+        document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play the next game on the schedule.';
+        game_tracker++;
+        losses++;
       }
 
-      $( ".big_script" ).css( "padding-top", "10px");
+      $( ".big_script" ).css( "margin-top", "10px");
       $( ".big_script" ).css( "font-size", "60px");
     }
   } else {
@@ -329,11 +353,15 @@ function pass() {
     document.getElementById("down").innerHTML = last_play;
     document.getElementById("last_play").innerHTML = '';
     if (last_play == 'Touchdown!') {
-      document.getElementById("play_again").innerHTML = 'You win! Click reset game to play again.';
+      document.getElementById("play_again").innerHTML = 'You win! Click reset game to play the next game on the schedule.';
+      game_tracker++;
+      wins++;
     } else {
-      document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play again.';
+      document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play the next game on the schedule.';
+      game_tracker++;
+      losses++;
     }
-    $( ".big_script" ).css( "padding-top", "10%");
+    $( ".big_script" ).css( "margin-top", "10%");
     $( ".big_script" ).css( "font-size", "60px");
   }
 }
@@ -341,83 +369,83 @@ function pass() {
 function run() {
   if (last_play !== 'Fumble...' && last_play !== 'Interception...' && last_play !== 'Touchdown!' && last_play !== 'Turnover on downs...'){
     random = Math.random();
-    if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][0]) {
+    if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][0]) {
       last_play = "Fumble...";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][1]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][1]) {
       yard += 5;
       yard_to_gain += 5;
       last_play = "Loss of 5 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][2]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][2]) {
       yard += 4;
       yard_to_gain += 4;
       last_play = "Loss of 4 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][3]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][3]) {
       yard += 3;
       yard_to_gain += 3;
       last_play = "Loss of 3 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][4]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][4]) {
       yard += 2;
       yard_to_gain += 2;
       last_play = "Loss of 2 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][5]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][5]) {
       yard += 1;
       yard_to_gain += 1;
       last_play = "Loss of 1 yard.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][6]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][6]) {
       last_play = "Gain of 0 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][7]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][7]) {
       yard -= 1;
       yard_to_gain -= 1;
       last_play = "Gain of 1 yard.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][8]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][8]) {
       yard -= 2;
       yard_to_gain -= 2;
       last_play = "Gain of 2 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][9]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][9]) {
       yard -= 3;
       yard_to_gain -= 3;
       last_play = "Gain of 3 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][10]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][10]) {
       yard -= 4;
       yard_to_gain -= 4;
       last_play = "Gain of 4 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][11]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][11]) {
       yard -= 5;
       yard_to_gain -= 5;
       last_play = "Gain of 5 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][12]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][12]) {
       yard -= 6;
       yard_to_gain -= 6;
       last_play = "Gain of 6 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][13]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][13]) {
       yard -= 7;
       yard_to_gain -= 7;
       last_play = "Gain of 7 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][14]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][14]) {
       yard -= 8;
       yard_to_gain -= 8;
       last_play = "Gain of 8 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][15]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][15]) {
       yard -= 9;
       yard_to_gain -= 9;
       last_play = "Gain of 9 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][16]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][16]) {
       yard -= 10;
       yard_to_gain -= 10;
       last_play = "Gain of 10 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][17]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][17]) {
       yard -= 11;
       yard_to_gain -= 11;
       last_play = "Gain of 11 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][18]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][18]) {
       yard -= 12;
       yard_to_gain -= 12;
       last_play = "Gain of 12 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][19]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][19]) {
       yard -= 13;
       yard_to_gain -= 13;
       last_play = "Gain of 13 yards.";
-    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][0]][20]) {
+    } else if (random <= team_prob_run[schedules[team_to_abbr[myTeam]][game_tracker]][20]) {
       yard -= 14;
       yard_to_gain -= 14;
       last_play = "Gain of 14 yards.";
@@ -518,12 +546,15 @@ function run() {
       document.getElementById("down").innerHTML = last_play;
       document.getElementById("last_play").innerHTML = '';
       if (last_play == 'Touchdown!') {
-        document.getElementById("play_again").innerHTML = 'You win! Click reset game to play again.';
+        document.getElementById("play_again").innerHTML = 'You win! Click reset game to play the next game on the schedule.';
+        game_tracker++;
+        wins++;
       } else {
-        document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play again.';
+        document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play the next game on the schedule.';
+        game_tracker++;
+        losses++;
       }
-
-      $( ".big_script" ).css( "padding-top", "10px");
+      $( ".big_script" ).css( "margin-top", "10px");
       $( ".big_script" ).css( "font-size", "60px");
     }
 
@@ -533,12 +564,16 @@ function run() {
     document.getElementById("down").innerHTML = last_play;
     document.getElementById("last_play").innerHTML = '';
     if (last_play == 'Touchdown!') {
-      document.getElementById("play_again").innerHTML = 'You win! Click reset game to play again.';
+      document.getElementById("play_again").innerHTML = 'You win! Click reset game to play the next game on the schedule.';
+      game_tracker++;
+      wins++;
     } else {
-      document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play again.';
+      document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play the next game on the schedule.';
+      game_tracker++;
+      losses++;
     }
 
-    $( ".big_script" ).css( "padding-top", "10px");
+    $( ".big_script" ).css( "margin-top", "10px");
     $( ".big_script" ).css( "font-size", "60px");
   }
 

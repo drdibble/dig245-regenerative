@@ -9,9 +9,9 @@
 
 <!-- CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/css/intro_css.css">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body onload="reset_game()">
 
 
 <!-- visible content goes here -->
@@ -20,14 +20,147 @@
 <!-- javascript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-<script src="assets/js/main.js"></script>
-<div class="container-fluid white">
-  <select id="selectTeam">
-    <option>Choose a team</option>
-  </select>
-  <a href="./game_page.html">
-    <input type="submit"/>
-  </a>
+
+<div class="container-fluid intro">
+  <div class="row">
+    &nbsp;
+  </div>
+  <div class="row">
+    &nbsp;
+  </div>
+  <div class="row">
+    <div class="col-12 title">
+      PROBABILITY FOOTBALL
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3 offset-3">
+      <div class="title_descriptor">
+        COACH YOUR FAVORITE TEAM FOR A SEASON. GET IN THE GAME!
+      </div>
+      <div class="form-group">
+          <select id="selectTeam">
+            <option>Choose a team</option>
+          </select>
+      </div>
+      <div class="form-group">
+        <input value="Play Season" type="submit" onclick="console.log('clicked')" id="submit" />
+      </div>
+    </div>
+
+    <div class="col-3 belichick">
+      <img src="./assets/img/belichick.png" alt="Image of a coach" width="260" height="260">
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+<div class="container-fluid">
+
+  <div class="grass">
+    <div class="row endzone">
+      <div class="center play_text">
+        You need a touchdown to win the game. <br> Call your play!
+      </div>
+      <div id="record"></div>
+    </div>
+
+    <div class="row endzone">
+      <div class="col-6 right">
+        <button onclick="run()">Run</button>
+      </div>
+      <div class="col-6">
+        <button onclick="pass()">Pass</button>
+      </div>
+    </div>
+    <div class="row endzone">
+      <div class="col-12 center">
+        <button onclick="reset_game()">Reset Game</button>
+      </div>
+    </div>
+    <div class="tick" style="top: 335px; left: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_left" style="top: 310px; left: 34px;">
+      10
+    </div>
+    <div class="tick" style="top: 335px; right: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_right" style="top: 310px; right: 34px;">
+      10
+    </div>
+    <div class="tick" style="top: 535px; left: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_left" style="top: 510px; left: 34px;">
+      20
+    </div>
+    <div class="tick" style="top: 535px; right: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_right" style="top: 510px; right: 34px;">
+      20
+    </div>
+    <div class="tick" style="top: 735px; left: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_left" style="top: 710px; left: 34px;">
+      30
+    </div>
+    <div class="tick" style="top: 735px; right: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_right" style="top: 710px; right: 34px;">
+      30
+    </div>
+    <div class="tick" style="top: 935px; left: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_left" style="top: 910px; left: 34px;">
+      40
+    </div>
+    <div class="tick" style="top: 935px; right: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_right" style="top: 910px; right: 34px;">
+      40
+    </div>
+    <div class="tick" style="top: 1135px; left: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_left" style="top: 1110px; left: 34px;">
+      50
+    </div>
+    <div class="tick" style="top: 1135px; right: 0px;">
+      &nbsp;
+    </div>
+    <div class="yard_mark_right" style="top: 1110px; right: 34px;">
+      50
+    </div>
+    <div class="row">
+      <div class="yellow_line"></div>
+    </div>
+    <div class="row" id="yard_line">
+      <div class="yard_line"></div>
+    </div>
+    <div class="row">
+      <h2 class="center big_script"><span id="last_play"></span></h2>
+    </div>
+    <div class="row">
+      <h2 class="center big_script"><span id="down"></span></h2>
+    </div>
+    <div class="row">
+      <h2 class="center"><span id="play_again"></span></h2>
+    </div>
+
+  </div>
+
 
 
 
@@ -37,10 +170,11 @@
 </div>
 
 
-
+<script src="assets/js/main.js"></script>
 
 
 
 
 </body>
+
 </html>
