@@ -335,11 +335,11 @@ function pass() {
       document.getElementById("down").innerHTML = last_play;
       document.getElementById("last_play").innerHTML = '';
       if (last_play == 'Touchdown!') {
-        document.getElementById("play_again").innerHTML = 'You win! Click reset game to play the next game on the schedule.';
+        document.getElementById("play_again").innerHTML = 'You win! Click next game to play the next game on the schedule.';
         game_tracker++;
         wins++;
       } else {
-        document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play the next game on the schedule.';
+        document.getElementById("play_again").innerHTML = 'You lose. Click next game to play the next game on the schedule.';
         game_tracker++;
         losses++;
       }
@@ -353,11 +353,11 @@ function pass() {
     document.getElementById("down").innerHTML = last_play;
     document.getElementById("last_play").innerHTML = '';
     if (last_play == 'Touchdown!') {
-      document.getElementById("play_again").innerHTML = 'You win! Click reset game to play the next game on the schedule.';
+      document.getElementById("play_again").innerHTML = 'You win! Click next game to play the next game on the schedule.';
       game_tracker++;
       wins++;
     } else {
-      document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play the next game on the schedule.';
+      document.getElementById("play_again").innerHTML = 'You lose. Click next game to play the next game on the schedule.';
       game_tracker++;
       losses++;
     }
@@ -546,11 +546,11 @@ function run() {
       document.getElementById("down").innerHTML = last_play;
       document.getElementById("last_play").innerHTML = '';
       if (last_play == 'Touchdown!') {
-        document.getElementById("play_again").innerHTML = 'You win! Click reset game to play the next game on the schedule.';
+        document.getElementById("play_again").innerHTML = 'You win! Click next game to play the next game on the schedule.';
         game_tracker++;
         wins++;
       } else {
-        document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play the next game on the schedule.';
+        document.getElementById("play_again").innerHTML = 'You lose. Click next game to play the next game on the schedule.';
         game_tracker++;
         losses++;
       }
@@ -564,11 +564,11 @@ function run() {
     document.getElementById("down").innerHTML = last_play;
     document.getElementById("last_play").innerHTML = '';
     if (last_play == 'Touchdown!') {
-      document.getElementById("play_again").innerHTML = 'You win! Click reset game to play the next game on the schedule.';
+      document.getElementById("play_again").innerHTML = 'You win! Click next game to play the next game on the schedule.';
       game_tracker++;
       wins++;
     } else {
-      document.getElementById("play_again").innerHTML = 'You lose. Click reset game to play the next game on the schedule.';
+      document.getElementById("play_again").innerHTML = 'You lose. Click next game to play the next game on the schedule.';
       game_tracker++;
       losses++;
     }

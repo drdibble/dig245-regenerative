@@ -123,5 +123,19 @@ body {
 
 .big_script {
   font-size: 36px;
+}
+
+.last_play_descriptor {
   position: fixed;
+  top: 26%;
+}
+
+.down_descriptor {
+  position: fixed;
+  top: 32%;
+}
+
+.play_again {
+  position: fixed;
+  top: 38%;
 }
