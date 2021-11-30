@@ -11,7 +11,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body onload="reset_game()">
+<body onload="next_game()">
 
 
 <!-- visible content goes here -->
@@ -39,6 +39,7 @@
       <div class="title_descriptor">
         COACH YOUR FAVORITE TEAM FOR A SEASON. GET IN THE GAME!
       </div>
+
       <div class="form-group">
           <select id="selectTeam">
             <option>Choose a team</option>
@@ -54,13 +55,25 @@
     </div>
 
   </div>
+</div>
 
+<div class="container-fluid endgame">
+  <div id="record"></div>
+  <div class="row">
+    <div class="col-12" id="endgame_message">
 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 center">
+      <button onclick="next_game()" id="next">Next Game</button>
+    </div>
+  </div>
 
 </div>
 
 
-<div class="container-fluid">
+<div class="container-fluid game_display">
 
   <div class="grass">
     <div class="row endzone">
@@ -78,11 +91,7 @@
         <button onclick="pass()">Pass</button>
       </div>
     </div>
-    <div class="row endzone">
-      <div class="col-12 center">
-        <button onclick="reset_game()">Next Game</button>
-      </div>
-    </div>
+
     <div class="tick" style="top: 335px; left: 0px;">
       &nbsp;
     </div>
@@ -161,12 +170,20 @@
 
   </div>
 
+</div>
 
+<div class="container-fluid end_season">
+  <div id="record"></div>
+  <div class="row">
+    <div class="col-12" id="end_season_message">
 
-
-
-
-
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 center">
+      <button onclick="reset_game()" id="home">Return to Home Page</button>
+    </div>
+  </div>
 </div>
 
 
