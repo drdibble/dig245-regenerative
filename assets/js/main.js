@@ -100,6 +100,11 @@ document.getElementById('submit').addEventListener('click', function (event) {
     myTeam = select.options[select.selectedIndex].value;
 });
 
+document.getElementById('about').addEventListener('click', function (event) {
+    event.preventDefault();
+    $(".about_page").css("display", "block");
+});
+
 document.getElementById('next').addEventListener('click', function (event) {
     event.preventDefault();
     $(".endgame").css("display", "none");
@@ -109,6 +114,13 @@ document.getElementById('home').addEventListener('click', function (event) {
     event.preventDefault();
     $(".intro").css("display", "block");
 });
+
+document.getElementById('home_about').addEventListener('click', function (event) {
+    event.preventDefault();
+    $(".about_page").css("display", "none");
+});
+
+
 
 // document.getElementById('yard_line').scrollIntoView({
 //     behavior: 'smooth'

@@ -42,18 +42,30 @@
 
       <div class="form-group">
           <select id="selectTeam">
-            <option>Choose a team</option>
           </select>
       </div>
       <div class="form-group">
         <input value="Play Season" type="submit" onclick="console.log('clicked')" id="submit" />
       </div>
+      <div class="form-group">
+        <input value="About This Project" type="button" onclick="about_page()" id="about"/>
+      </div>
+
     </div>
 
     <div class="col-3 belichick">
       <img src="./assets/img/belichick.png" alt="Image of a coach" width="260" height="260">
     </div>
 
+  </div>
+</div>
+
+<div class="container-fluid about_page">
+  <div>
+    My project focuses on the underlying probabilities involved in a football game. The player assumes the role of head coach for their favorite NFL team. Then, they will coach their way through a full, 17 game season in which every game has come down to the final drive. For each game, they will start at the 50 yard line, needing a touchdown to win the game. As head coach, they will select whether or not to pass or run the ball for each down. The underlying probabilities associated with the result of a play is based on the actual performance of the opposing team’s defense in the 2021 NFL season. That is, if the player decides to pass the ball in a game against the Seahawks, the result of that play will be based on the Seahawks’ defense’s performance against passing plays this season. To accomplish this goal, I acquired play by play data from the NFL season and used Python’s pandas to parse the data and assess the percentage of passing plays against each team that resulted in an interception, a yardage loss of up to 5 yards (sack), or a yardage gain of up to 15 yards. I followed the same steps for rushing plays except with fumbles replacing interceptions. Finally, the players are offered the option to examine the underlying probabilities they are up against in a “scouting report” of the opposing team.
+  </div>
+  <div>
+    <button onclick="reset_game()" id="home_about">Return to Homepage</button>
   </div>
 </div>
 
@@ -76,35 +88,125 @@
 <div class="container-fluid game_display">
 
   <div class="grass">
-    <div class="row endzone">
-      <div class="center play_text">
+    <div class="row">
+      <div class="col-8 center play_text endzone">
         You need a touchdown to win the game. <br> Call your play!
       </div>
-      <div id="record"></div>
+      <div class="col-4 scouting"></div>
     </div>
 
-    <div class="row endzone">
-      <div class="col-6 right">
+    <div class="row">
+      <div class="col-4 right endzone">
         <button onclick="run()">Run</button>
       </div>
-      <div class="col-6">
+      <div class="col-4 endzone">
         <button onclick="pass()">Pass</button>
       </div>
+      <div class="col-4 scouting">
+        <img src="./assets/img/logos/CHI.png" alt="CHI logo" width="165" height="110" class="center_logo">
+      </div>
     </div>
+    <div class="row">
+      <div class="col-8">
+        <div class="tick" style="top: 335px; left: 0px;">
+          &nbsp;
+        </div>
+        <div class="tick" style="top: 335px; right: 33%;">
+          &nbsp;
+        </div>
+        <div class="yard_mark_left" style="top: 310px; left: 2%;">
+          10
+        </div>
+        <div class="yard_mark_right" style="top: 310px; right: 35%;">
+          10
+        </div>
+        <div class="tick" style="top: 535px; left: 0px;">
+          &nbsp;
+        </div>
+        <div class="yard_mark_left" style="top: 510px; left: 2%;">
+          20
+        </div>
+        <div class="tick" style="top: 535px; right: 33%;">
+          &nbsp;
+        </div>
+        <div class="yard_mark_right" style="top: 510px; right: 35%;">
+          20
+        </div>
+        <div class="tick" style="top: 735px; left: 0px;">
+          &nbsp;
+        </div>
+        <div class="yard_mark_left" style="top: 710px; left: 2%;">
+          30
+        </div>
+        <div class="tick" style="top: 735px; right: 33%;">
+          &nbsp;
+        </div>
+        <div class="yard_mark_right" style="top: 710px; right: 35%;">
+          30
+        </div>
+        <div class="tick" style="top: 935px; left: 0px;">
+          &nbsp;
+        </div>
+        <div class="yard_mark_left" style="top: 910px; left: 2%;">
+          40
+        </div>
+        <div class="tick" style="top: 935px; right: 33%;">
+          &nbsp;
+        </div>
+        <div class="yard_mark_right" style="top: 910px; right: 35%;">
+          40
+        </div>
+        <div class="tick" style="top: 1135px; left: 0px;">
+          &nbsp;
+        </div>
+        <div class="yard_mark_left" style="top: 1110px; left: 2%;">
+          50
+        </div>
+        <div class="tick" style="top: 1135px; right: 33%;">
+          &nbsp;
+        </div>
+        <div class="yard_mark_right" style="top: 1110px; right: 35%;">
+          50
+        </div>
 
-    <div class="tick" style="top: 335px; left: 0px;">
+      </div>
+      <div class="col-4 scouting big_script center">
+        SCOUTING REPORT
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">&nbsp;</div>
+      <div class="col-4 scouting big_script center">RUN DEFENSE</div>
+    </div>
+    <div class="row">
+      <div class="col-8">&nbsp;</div>
+      <div class="col-4 scouting">
+        <img src="./assets/img/Rushing_Images/CHI_rush.png" alt="CHI rushing chart" class="center_img">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">&nbsp;</div>
+      <div class="col-4 scouting big_script center">PASS DEFENSE</div>
+    </div>
+    <div class="row">
+      <div class="col-8">&nbsp;</div>
+      <div class="col-4 scouting">
+        <img src="./assets/img/Passing_Images/CHI_pass.png" alt="CHI passing chart" class="center_img">
+      </div>
+    </div>
+    <!-- <div class="tick" style="top: 335px; left: 0px;">
       &nbsp;
-    </div>
-    <div class="yard_mark_left" style="top: 310px; left: 34px;">
+    </div> -->
+    <!-- <div class="yard_mark_left" style="top: 310px; left: 34px;">
       10
-    </div>
-    <div class="tick" style="top: 335px; right: 0px;">
+    </div> -->
+    <!-- <div class="tick" style="top: 335px; right: 0px;">
       &nbsp;
-    </div>
-    <div class="yard_mark_right" style="top: 310px; right: 34px;">
+    </div> -->
+    <!-- <div class="yard_mark_right" style="top: 310px; right: 34px;">
       10
-    </div>
-    <div class="tick" style="top: 535px; left: 0px;">
+    </div> -->
+    <!-- <div class="tick" style="top: 535px; left: 0px;">
       &nbsp;
     </div>
     <div class="yard_mark_left" style="top: 510px; left: 34px;">
@@ -115,8 +217,8 @@
     </div>
     <div class="yard_mark_right" style="top: 510px; right: 34px;">
       20
-    </div>
-    <div class="tick" style="top: 735px; left: 0px;">
+    </div> -->
+    <!-- <div class="tick" style="top: 735px; left: 0px;">
       &nbsp;
     </div>
     <div class="yard_mark_left" style="top: 710px; left: 34px;">
@@ -151,22 +253,27 @@
     </div>
     <div class="yard_mark_right" style="top: 1110px; right: 34px;">
       50
+    </div> -->
+    <div class="row">
+      <h2 class="col-8 center last_play_descriptor">
+        <span id="last_play"></span>
+      </h2>
+      <div class="col-4 scouting_end">&nbsp;</div>
     </div>
     <div class="row">
-      <div class="yellow_line"></div>
+      <h2 class="col-8 center down_descriptor"><span id="down"></span></h2>
+      <div class="col-4 scouting_end">&nbsp;</div>
+    </div>
+    <div class="row">
+      <h2 class="col-8 center play_again"><span id="play_again"></span></h2>
     </div>
     <div class="row" id="yard_line">
-      <div class="yard_line"></div>
+      <div class="col-8 yard_line"></div>
     </div>
     <div class="row">
-      <h2 class="center last_play_descriptor"><span id="last_play"></span></h2>
+      <div class="col-8 yellow_line"></div>
     </div>
-    <div class="row">
-      <h2 class="center down_descriptor"><span id="down"></span></h2>
-    </div>
-    <div class="row">
-      <h2 class="center play_again"><span id="play_again"></span></h2>
-    </div>
+
 
   </div>
 
