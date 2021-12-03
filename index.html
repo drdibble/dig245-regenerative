@@ -11,7 +11,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body onload="next_game()">
+<body onload="reset_game()">
 
 
 <!-- visible content goes here -->
@@ -47,49 +47,24 @@
       <div class="form-group">
         <input value="Play Season" type="submit" onclick="console.log('clicked')" id="submit" />
       </div>
-      <!-- <div class="form-group">
-        <input value="About This Project" type="button" onclick="about_page()" id="about"/>
-      </div> -->
-      <!-- The Modal -->
-      <div id="myModal" class="modal form-group">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Modal Header</h2>
-          </div>
-          <div class="modal-body">
-            <p>Some text in the Modal Body</p>
-            <p>Some other text...</p>
-          </div>
-          <div class="modal-footer">
-            <h3>Modal Footer</h3>
-          </div>
-        </div>
-
+      <div class="form-group">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="about">
+          About This Project
+        </button>
       </div>
-
     </div>
 
     <div class="col-3 belichick">
-      <img src="./assets/img/belichick.png" alt="Image of a coach" width="260" height="260">
+      <img src="./assets/img/belichick.png" alt="Image of a coach" width="300" height="300">
     </div>
 
   </div>
+
+
+
+
 </div>
 
-<div class="container-fluid about_page">
-
-
-
-  <div class="about_message">
-    My project focuses on the underlying probabilities involved in a football game. The player assumes the role of head coach for their favorite NFL team. Then, they will coach their way through a full, 17 game season in which every game has come down to the final drive. For each game, they will start at the 50 yard line, needing a touchdown to win the game. As head coach, they will select whether or not to pass or run the ball for each down. The underlying probabilities associated with the result of a play is based on the actual performance of the opposing team’s defense in the 2021 NFL season. That is, if the player decides to pass the ball in a game against the Seahawks, the result of that play will be based on the Seahawks’ defense’s performance against passing plays this season. To accomplish this goal, I acquired play by play data from the NFL season and used Python’s pandas to parse the data and assess the percentage of passing plays against each team that resulted in an interception, a yardage loss of up to 5 yards (sack), or a yardage gain of up to 15 yards. I followed the same steps for rushing plays except with fumbles replacing interceptions. Finally, the players are offered the option to examine the underlying probabilities they are up against in a “scouting report” of the opposing team.
-  </div>
-  <div>
-    <button onclick="reset_game()" id="home_about">Return to Homepage</button>
-  </div>
-</div>
 
 <div class="container-fluid endgame">
   <div id="record"></div>
@@ -121,9 +96,13 @@
         <button onclick="pass()" id="pass">Pass</button>
       </div>
     </div>
+
+
+
+
 </div>
 <div class="container-fluid" style="padding:0">
-  <svg width="100%" height="100%" viewBox="0 0 1440 871" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg height="100%" width="100%" viewBox="0 0 1440 871" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g clip-path="url(#clip0_121_293)">
   <rect x="100%" width="100%" height="910" fill="#89D070"/>
   <rect id="yellow_line" x="80" y="560" width="1279" height="6" fill="#FFFF00"/>
@@ -252,8 +231,23 @@
   </div>
 </div>
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+<!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">About This Project</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        My project focuses on the underlying probabilities involved in a football game. The player assumes the role of head coach for their favorite NFL team. Then, they will coach their way through a full, 17 game season in which every game has come down to the final drive. For each game, they will start at the 50 yard line, needing a touchdown to win the game. As head coach, they will select whether or not to pass or run the ball for each down. The underlying probabilities associated with the result of a play is based on the actual performance of the opposing team’s defense in the 2021 NFL season. That is, if the player decides to pass the ball in a game against the Seahawks, the result of that play will be based on the Seahawks’ defense’s performance against passing plays this season. To accomplish this goal, I acquired play by play data from the NFL season and used Python’s pandas to parse the data and assess the percentage of passing plays against each team that resulted in an interception, a yardage loss of up to 5 yards (sack), or a yardage gain of up to 15 yards. I followed the same steps for rushing plays except with fumbles replacing interceptions. Finally, the players are offered the option to examine the underlying probabilities they are up against in a “scouting report” of the opposing team.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
