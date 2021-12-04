@@ -11,7 +11,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body onload="reset_game()">
+<!-- <body onload="reset_game()"> -->
+<body>
 
 
 <!-- visible content goes here -->
@@ -48,7 +49,7 @@
         <input value="Play Season" type="submit" onclick="console.log('clicked')" id="submit" />
       </div>
       <div class="form-group">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="about">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#aboutModal" id="about">
           About This Project
         </button>
       </div>
@@ -59,10 +60,6 @@
     </div>
 
   </div>
-
-
-
-
 </div>
 
 
@@ -83,24 +80,42 @@
 
 <div style="display:fixed; top:0; right:0; width:100%;">
     <div class="row">
-      <div class="col-12 center play_text endzone">
-        You need a touchdown to win the game. <br> Call your play!
+      <div class="col-12 endzone center">
+        <button type="button" id="start_over">
+          Start Over
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 endzone">
+        <img src="./assets/img/logos/CHI.png" alt="CHI logo" width="60" height="60" class="center_logo" id="team_endzone">
+      </div>
+      <div class="col-6 endzone center">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#scoutingModal">
+          Scouting Report
+        </button>
+      </div>
+      <div class="col-3 endzone">
+        <img src="./assets/img/logos/CHI.png" alt="CHI logo" width="60" height="60" class="center_logo" id="opp_endzone">
       </div>
     </div>
 
     <div class="row">
-      <div class="col-6 right endzone">
-        <button onclick="run()">Run</button>
+      <div class="col-3 center endzone">
+        <h4>Team</h4>
       </div>
-      <div class="col-6 endzone">
-        <button onclick="pass()" id="pass">Pass</button>
+      <div class="col-3 right endzone align-baseline">
+        <button onclick="run()" class="align-baseline">Run</button>
+      </div>
+      <div class="col-3 endzone">
+        <button onclick="pass()">Pass</button>
+      </div>
+      <div class="col-3 center endzone">
+        <h4>Opponent</h4>
       </div>
     </div>
-
-
-
-
 </div>
+
 <div class="container-fluid" style="padding:0">
   <svg height="100%" width="100%" viewBox="0 0 1440 871" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g clip-path="url(#clip0_121_293)">
@@ -232,15 +247,40 @@
 </div>
 
 <!-- Modal -->
-<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">About This Project</h5>
+        <h5 class="modal-title" id="aboutModalLabel">About This Project</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         My project focuses on the underlying probabilities involved in a football game. The player assumes the role of head coach for their favorite NFL team. Then, they will coach their way through a full, 17 game season in which every game has come down to the final drive. For each game, they will start at the 50 yard line, needing a touchdown to win the game. As head coach, they will select whether or not to pass or run the ball for each down. The underlying probabilities associated with the result of a play is based on the actual performance of the opposing team’s defense in the 2021 NFL season. That is, if the player decides to pass the ball in a game against the Seahawks, the result of that play will be based on the Seahawks’ defense’s performance against passing plays this season. To accomplish this goal, I acquired play by play data from the NFL season and used Python’s pandas to parse the data and assess the percentage of passing plays against each team that resulted in an interception, a yardage loss of up to 5 yards (sack), or a yardage gain of up to 15 yards. I followed the same steps for rushing plays except with fumbles replacing interceptions. Finally, the players are offered the option to examine the underlying probabilities they are up against in a “scouting report” of the opposing team.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal" id="scoutingModal" tabindex="-1" aria-labelledby="scoutingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="scoutingModalLabel">Scouting Report</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="scouting">
+          <img src="./assets/img/logos/CHI.png" alt="CHI logo" width="60" height="60" class="center_logo" id="opp_logo">
+          <div class="scouting big_script center">RUN DEFENSE</div>
+          <img src="./assets/img/Rushing_Images/CHI_rush.png" alt="CHI rushing chart" class="center_img scouting" id="rush">
+          <div class="scouting big_script center">PASS DEFENSE</div>
+          <img src="./assets/img/Passing_Images/CHI_pass.png" alt="CHI passing chart" class="center_img scouting" id="pass">
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
