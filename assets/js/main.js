@@ -108,6 +108,7 @@ document.getElementById('home').addEventListener('click', function (event) {
 document.getElementById('start_over').addEventListener('click', function (event) {
     event.preventDefault();
     $(".intro").css("display", "block");
+    reset_game();
 });
 
 function update_opp_logo(opp){
@@ -151,6 +152,7 @@ function reset_game(){
   losses = 0;
   record = wins + '-' + losses;
   document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+  game_tracker = 0;
   down = 'First';
   yard = 50;
   yard_to_gain = 10;
@@ -161,7 +163,6 @@ function reset_game(){
   $( "#yellow_line" ).css("y", String((yard*14)-(10*14)));
   document.getElementById("down").innerHTML = down + " down and " + yard_to_gain + " from the " + yard;
   document.getElementById("last_play").innerHTML = '';
-  document.getElementById("play_again").innerHTML = '';
   $( "#yellow_line" ).css( "display", "block");
   $( "#yard_line" ).css( "display", "block");
   $( "#football" ).css( "display", "block");
@@ -201,7 +202,6 @@ function next_game() {
   $( "#yellow_line" ).css("y", String((yard*14)-(10*14)));
   document.getElementById("down").innerHTML = down + " down and " + yard_to_gain + " from the " + yard;
   document.getElementById("last_play").innerHTML = '';
-  document.getElementById("play_again").innerHTML = '';
   $( "#yellow_line" ).css( "display", "block");
   $( "#yard_line" ).css( "display", "block");
   $( "#football" ).css( "display", "block");
@@ -387,7 +387,6 @@ function pass() {
         document.getElementById("down").innerHTML = down + " down and " + yard_to_gain + " from the " + yard;
       }
       document.getElementById("last_play").innerHTML = last_play;
-      document.getElementById("play_again").innerHTML = '';
     }
     else {
       $( "#yard_line" ).css( "display", "none");
@@ -647,7 +646,6 @@ function run() {
         document.getElementById("down").innerHTML = down + " down and " + yard_to_gain + " from the " + yard;
       }
       document.getElementById("last_play").innerHTML = last_play;
-      document.getElementById("play_again").innerHTML = '';
     }
     else {
       $( "#yard_line" ).css( "display", "none");

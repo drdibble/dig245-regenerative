@@ -88,32 +88,33 @@
     </div>
     <div class="row">
       <div class="col-3 endzone">
-        <img src="./assets/img/logos/CHI.png" alt="CHI logo" width="60" height="60" class="center_logo" id="team_endzone">
+        <img src="./assets/img/logos/CHI.png" alt="Team logo" width="60" height="60" class="center_logo" id="team_endzone">
+        <h4 class="center">Team</h4>
       </div>
       <div class="col-6 endzone center">
         <button type="button" data-bs-toggle="modal" data-bs-target="#scoutingModal">
           Scouting Report
         </button>
+        <h2 id="last_play" class="center"></h2>
+        <h2 id="down" class="center"></h2>
       </div>
       <div class="col-3 endzone">
-        <img src="./assets/img/logos/CHI.png" alt="CHI logo" width="60" height="60" class="center_logo" id="opp_endzone">
+        <img src="./assets/img/logos/CHI.png" alt="Opponent logo" width="60" height="60" class="center_logo" id="opp_endzone">
+        <h4 class="center">Opponent</h4>
       </div>
     </div>
 
+
     <div class="row">
-      <div class="col-3 center endzone">
-        <h4>Team</h4>
+      <div class="col-6 right endzone">
+        <button onclick="run()">Run</button>
       </div>
-      <div class="col-3 right endzone align-baseline">
-        <button onclick="run()" class="align-baseline">Run</button>
-      </div>
-      <div class="col-3 endzone">
+      <div class="col-6 endzone">
         <button onclick="pass()">Pass</button>
       </div>
-      <div class="col-3 center endzone">
-        <h4>Opponent</h4>
-      </div>
     </div>
+
+
 </div>
 
 <div class="container-fluid" style="padding:0">
@@ -160,77 +161,11 @@
 </div>
 
 
-<!-- <div class="container-fluid game_display">
-
-  <div class="grass">
-    <div class="row">
-      <div class="col-8 center play_text endzone">
-        You need a touchdown to win the game. <br> Call your play!
-      </div>
-      <div class="col-4 scouting"></div>
-    </div>
-
-    <div class="row">
-      <div class="col-4 right endzone">
-        <button onclick="run()">Run</button>
-      </div>
-      <div class="col-4 endzone">
-        <button onclick="pass()" id="pass">Pass</button>
-      </div>
-      <div class="col-4 scouting">
-        <img src="./assets/img/logos/CHI.png" alt="CHI logo" width="165" height="110" class="center_logo">
-      </div>
-    </div> -->
-      <!-- </div> -->
-      <!-- <div class="col-4 scouting big_script center">
-        SCOUTING REPORT
-      </div> -->
-    <!-- </div> -->
-    <!-- <div class="row">
-      <div class="col-8">&nbsp;</div>
-      <div class="col-4 scouting big_script center">RUN DEFENSE</div>
-    </div>
-    <div class="row">
-      <div class="col-8">&nbsp;</div>
-      <div class="col-4 scouting">
-        <img src="./assets/img/Rushing_Images/CHI_rush.png" alt="CHI rushing chart" class="center_img">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-8">&nbsp;</div>
-      <div class="col-4 scouting big_script center">PASS DEFENSE</div>
-    </div>
-    <div class="row">
-      <div class="col-8">&nbsp;</div>
-      <div class="col-4 scouting">
-        <img src="./assets/img/Passing_Images/CHI_pass.png" alt="CHI passing chart" class="center_img">
-      </div>
-    </div> -->
-
-    <div class="row">
-      <h2 class="col-12 center last_play_descriptor">
-        <span id="last_play"></span>
-      </h2>
-      <!-- <div class="col-4 scouting_end">&nbsp;</div> -->
-    </div>
-    <div class="row">
-      <h2 class="col-12 center down_descriptor"><span id="down"></span></h2>
-      <!-- <div class="col-4 scouting_end">&nbsp;</div> -->
-    </div>
-    <div class="row">
-      <h2 class="col-12 center play_again"><span id="play_again"></span></h2>
-    </div>
-    <!-- <div class="row" id="yard_line">
-      <div class="col-8 yard_line"></div>
-    </div> -->
-    <!-- <div class="row">
-      <div class="col-8 yellow_line"></div>
-    </div> -->
 
 
-  </div>
+  <!-- </div>
 
-</div>
+</div> -->
 
 <div class="container-fluid end_season">
   <div id="record"></div>
@@ -275,7 +210,7 @@
       </div>
       <div class="modal-body">
         <div class="scouting">
-          <img src="./assets/img/logos/CHI.png" alt="CHI logo" width="60" height="60" class="center_logo" id="opp_logo">
+          <img src="./assets/img/logos/CHI.png" alt="Opponent logo" width="60" height="60" class="center_logo" id="opp_logo">
           <div class="scouting big_script center">RUN DEFENSE</div>
           <img src="./assets/img/Rushing_Images/CHI_rush.png" alt="CHI rushing chart" class="center_img scouting" id="rush">
           <div class="scouting big_script center">PASS DEFENSE</div>
