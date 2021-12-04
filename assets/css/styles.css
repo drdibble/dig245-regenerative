@@ -101,7 +101,7 @@ body {
 
 
 
-.play_text, #end_season_message {
+.play_text {
   text-align: center;
   color: white;
   text-transform: uppercase;
@@ -144,15 +144,26 @@ body {
 #endgame_message {
   color: white;
   text-align: center;
-  font-size: 96px;
-  padding: 100px 0px 60px;
+  font-size: 72px;
+  padding: 100px 0px 30px;
+}
+
+.endgame_record {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  padding: 20px 0px 20px;
+}
+
+#endseason_logo {
+  padding-top: 30px;
 }
 
 #endseason_message {
   color: white;
   text-align: center;
   font-size: 96px;
-  padding: 100px 0px 60px;
+  padding: 100px 0px 30px;
 }
 
 .scouting {
@@ -178,4 +189,12 @@ body {
   margin-right: auto;
   width: auto;
   height: 10vh;
+}
+
+.endgame_logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 15vh;
 }
