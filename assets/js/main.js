@@ -103,6 +103,7 @@ document.getElementById('next').addEventListener('click', function (event) {
 document.getElementById('home').addEventListener('click', function (event) {
     event.preventDefault();
     $(".intro").css("display", "block");
+    $(".end_season").css("display", "none");
 });
 
 document.getElementById('start_over').addEventListener('click', function (event) {
@@ -187,6 +188,7 @@ let game_tracker = 0;
 let wins = 0;
 let losses = 0;
 let record = wins + '-' + losses;
+document.getElementById("down").innerHTML = down + " down and " + yard_to_gain + " from the " + yard;
 
 
 function next_game() {
@@ -400,6 +402,7 @@ function pass() {
         wins++;
         record = wins + '-' + losses;
         document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+        console.log(game_tracker);
         if(game_tracker == 17){
           if(wins > 8){
             document.getElementById("end_season_message").innerHTML = 'Congratulations! You finished your season with a record of ' + record;
@@ -416,6 +419,7 @@ function pass() {
         losses++;
         record = wins + '-' + losses;
         document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+        console.log(game_tracker);
         if(game_tracker == 17){
           if(wins > 8){
             document.getElementById("end_season_message").innerHTML = 'Congratulations! You finished your season with a record of ' + record;
@@ -443,6 +447,7 @@ function pass() {
       wins++;
       record = wins + '-' + losses;
       document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+      console.log(game_tracker);
       if(game_tracker == 17){
         if(wins > 8){
           document.getElementById("end_season_message").innerHTML = 'Congratulations! You finished your season with a record of ' + record;
@@ -459,6 +464,7 @@ function pass() {
       losses++;
       record = wins + '-' + losses;
       document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+      console.log(game_tracker);
       if(game_tracker == 17){
         if(wins > 8){
           document.getElementById("end_season_message").innerHTML = 'Congratulations! You finished your season with a record of ' + record;
@@ -660,6 +666,7 @@ function run() {
         wins++;
         record = wins + '-' + losses;
         document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+        console.log(game_tracker);
         if(game_tracker == 17){
           if(wins > 8){
             document.getElementById("end_season_message").innerHTML = 'Congratulations! You finished your season with a record of ' + record;
@@ -676,6 +683,7 @@ function run() {
         losses++;
         record = wins + '-' + losses;
         document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+        console.log(game_tracker);
         if(game_tracker == 17){
           if(wins > 8){
             document.getElementById("end_season_message").innerHTML = 'Congratulations! You finished your season with a record of ' + record;
@@ -703,6 +711,7 @@ function run() {
       wins++;
       record = wins + '-' + losses;
       document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+      console.log(game_tracker);
       if(game_tracker == 17){
         if(wins > 8){
           document.getElementById("end_season_message").innerHTML = 'Congratulations! You finished your season with a record of ' + record;
@@ -719,6 +728,7 @@ function run() {
       losses++;
       record = wins + '-' + losses;
       document.getElementById("record").innerHTML = "Record" + "<br />" + record;
+      console.log(game_tracker);
       if(game_tracker == 17){
         if(wins > 8){
           document.getElementById("end_season_message").innerHTML = 'Congratulations! You finished your season with a record of ' + record;

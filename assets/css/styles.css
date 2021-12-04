@@ -35,7 +35,7 @@ body {
 }
 
 .end_season {
-  z-index: 80;
+  z-index: 95;
   width: 100%;
   height: 100%;
   background-color: #89D070;
@@ -95,7 +95,13 @@ body {
   padding: 3px;
 }
 
-.play_text {
+#last_play, #down {
+  color: white;
+}
+
+
+
+.play_text, #end_season_message {
   text-align: center;
   color: white;
   text-transform: uppercase;
