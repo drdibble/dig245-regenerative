@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <!-- <body onload="reset_game()"> -->
-<body>
+<body onload="update_score()">
 
 
 <!-- visible content goes here -->
@@ -40,7 +40,6 @@
       <div class="title_descriptor">
         COACH YOUR FAVORITE TEAM FOR A SEASON. GET IN THE GAME!
       </div>
-
       <div class="form-group">
           <select id="selectTeam">
           </select>
@@ -53,10 +52,16 @@
           About This Project
         </button>
       </div>
+      <div class="form-group">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#howToModal" id="howTo">
+          How To Play
+        </button>
+      </div>
+
     </div>
 
     <div class="col-3 belichick">
-      <img src="./assets/img/belichick.png" alt="Image of a coach" width="300" height="300">
+      <img src="./assets/img/belichick.png" alt="Image of a coach" width="350" height="350">
     </div>
 
   </div>
@@ -64,7 +69,11 @@
 
 <div class="container-fluid end_season">
   <div class="row">
-    <img src="./assets/img/logos/CHI.png" alt="Team logo" class="endgame_logo" id="endseason_logo">
+    <div class="col-12" id="final_game_message">
+    </div>
+  </div>
+  <div class="row">
+    <img src="" alt="Team logo" class="endgame_logo" id="endseason_logo">
   </div>
   <div class="endgame_record center" id="end_season_message"></div>
   <div class="endgame_record center">
@@ -82,11 +91,20 @@
   <div id="record"></div>
   <div class="row">
     <div class="col-12" id="endgame_message">
-
     </div>
   </div>
   <div class="row">
-    <img src="./assets/img/logos/CHI.png" alt="Team logo" class="endgame_logo" id="endgame_logo">
+    <div class="col-4"></div>
+    <div class="col-2">
+      <img src="" alt="Team logo" class="endgame_logo" id="endgame_logo">
+      <h4 class="center" id="endgame_team_score"></h4>
+    </div>
+    <div class="col-2">
+      <img src="" alt="Opponent logo" class="endgame_logo" id="endgame_opp_logo">
+      <h4 class="center" id="endgame_opp_score"></h4>
+    </div>
+    <div class="col-4"></div>
+
   </div>
 
   <div class="endgame_record center" id="endgame_record">
@@ -110,19 +128,19 @@
     </div>
     <div class="row">
       <div class="col-3 endzone">
-        <img src="./assets/img/logos/CHI.png" alt="Team logo" width="60" height="60" class="center_logo" id="team_endzone">
-        <h4 class="center">Team</h4>
+        <img src="" alt="Team logo" width="60" height="60" class="center_logo" id="team_endzone">
+        <h4 class="center" id="team_score"></h4>
       </div>
       <div class="col-6 endzone center">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#scoutingModal">
+        <button type="button" data-bs-toggle="modal" data-bs-placement="top" title="Consult the underlying probabilities to make an informed decision!" data-bs-target="#scoutingModal">
           Scouting Report
         </button>
         <h2 id="last_play" class="center"></h2>
         <h2 id="down" class="center"></h2>
       </div>
       <div class="col-3 endzone">
-        <img src="./assets/img/logos/CHI.png" alt="Opponent logo" width="60" height="60" class="center_logo" id="opp_endzone">
-        <h4 class="center">Opponent</h4>
+        <img src="" alt="Opponent logo" width="60" height="60" class="center_logo" id="opp_endzone">
+        <h4 class="center" id="opp_score"></h4>
       </div>
     </div>
 
@@ -198,7 +216,25 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        My project focuses on the underlying probabilities involved in a football game. The player assumes the role of head coach for their favorite NFL team. Then, they will coach their way through a full, 17 game season in which every game has come down to the final drive. For each game, they will start at the 50 yard line, needing a touchdown to win the game. As head coach, they will select whether or not to pass or run the ball for each down. The underlying probabilities associated with the result of a play is based on the actual performance of the opposing team’s defense in the 2021 NFL season. That is, if the player decides to pass the ball in a game against the Seahawks, the result of that play will be based on the Seahawks’ defense’s performance against passing plays this season. To accomplish this goal, I acquired play by play data from the NFL season and used Python’s pandas to parse the data and assess the percentage of passing plays against each team that resulted in an interception, a yardage loss of up to 5 yards (sack), or a yardage gain of up to 15 yards. I followed the same steps for rushing plays except with fumbles replacing interceptions. Finally, the players are offered the option to examine the underlying probabilities they are up against in a “scouting report” of the opposing team.
+        This project focuses on the underlying probabilities involved in a football game. The player assumes the role of head coach for their favorite NFL team. Then, they will coach their way through a full, 17 game season in which every game has come down to the final drive. For each game, they will start at the 50 yard line, needing a touchdown to win the game. As head coach, they will select whether or not to pass or run the ball for each down. The underlying probabilities associated with the result of a play is based on the actual performance of the opposing team’s defense in the 2021 NFL season. That is, if the player decides to pass the ball in a game against the Seahawks, the result of that play will be based on the Seahawks’ defensive performance against passing plays this season. To accomplish this goal, I acquired play by play data from the NFL season and used Python’s pandas to parse the data and assess the percentage of passing plays against each team that resulted in an interception, a yardage loss of up to 5 yards (sack), or a yardage gain of up to 15 yards. I followed the same steps for rushing plays except with fumbles replacing interceptions. Finally, the players are offered the option to examine the underlying probabilities they are up against in a “scouting report” of the opposing team.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="howToModal" tabindex="-1" aria-labelledby="howToModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="howToModalLabel">How To Play</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        You need to lead your team on a game-winning touchdown drive to win each game. As head coach, you will select whether to run or pass the ball for each play. The result of your play will be based on the opponent's defense in the 2021 NFL season. Check out the scouting report to consult the probabilities for the result of the play to make an informed decision with your play call. You will play through your team's full 17 game schedule and try to finish with a winning record. Best of luck!
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -218,7 +254,7 @@
       </div>
       <div class="modal-body">
         <div class="scouting">
-          <img src="./assets/img/logos/CHI.png" alt="Opponent logo" width="60" height="60" class="center_logo" id="opp_logo">
+          <img src="" alt="Opponent logo" width="60" height="60" class="center_logo" id="opp_logo">
           <div class="scouting big_script center">RUN DEFENSE</div>
           <img src="./assets/img/Rushing_Images/CHI_rush.png" alt="CHI rushing chart" class="center_img scouting" id="rush">
           <div class="scouting big_script center">PASS DEFENSE</div>
@@ -232,7 +268,9 @@
   </div>
 </div>
 
-
+<div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div>
 
 
 <script src="assets/js/main.js"></script>

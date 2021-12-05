@@ -1,3 +1,22 @@
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+let down = 'First';
+let yard = 50;
+let yard_to_gain = 10;
+let play = 'normal';
+let random = Math.random();
+let last_play = '';
+let game_tracker = 0;
+let wins = 0;
+let losses = 0;
+let record = wins + '-' + losses;
+let team_score_list = [10, 13, 17, 20, 24, 27, 31, 34, 38];
+let rand = getRandomInt(9);
+let team_score = team_score_list[rand];
+let opp_score = team_score + 4;
+
 let schedules = {
 'ARI': ['TEN', 'MIN', 'JAX', 'LA', 'SF', 'CLE', 'HOU', 'GB', 'SF', 'CAR', 'SEA', 'CHI', 'LA', 'DET', 'IND', 'DAL', 'SEA'],
 'ATL': ['PHI', 'TB', 'NYG', 'WAS', 'NYJ', 'MIA', 'CAR', 'NO', 'DAL', 'NE', 'JAX', 'TB', 'CAR', 'SF', 'DET', 'BUF', 'NO'],
@@ -83,6 +102,7 @@ document.getElementById('submit').addEventListener('click', function (event) {
     $(".intro").css("display", "none");
     myTeam = select.options[select.selectedIndex].value;
     update_team_endseason(team_to_abbr[myTeam]);
+    update_opp_endgame(schedules[team_to_abbr[myTeam]][game_tracker]);
     update_team_endgame(team_to_abbr[myTeam]);
     update_team_endzone(team_to_abbr[myTeam]);
     update_opp_endzone(schedules[team_to_abbr[myTeam]][game_tracker]);
@@ -91,11 +111,6 @@ document.getElementById('submit').addEventListener('click', function (event) {
     update_pass(schedules[team_to_abbr[myTeam]][game_tracker]);
     console.log(schedules[team_to_abbr[myTeam]][game_tracker]);
 });
-
-// document.getElementById('about').addEventListener('click', function (event) {
-//     event.preventDefault();
-//     $(".about_page").css("display", "block");
-// });
 
 document.getElementById('next').addEventListener('click', function (event) {
     event.preventDefault();
@@ -138,8 +153,24 @@ function update_team_endgame(team){
   document.getElementById("endgame_logo").src=("./assets/img/logos/"+team+".png");
 }
 
+function update_opp_endgame(opp){
+  document.getElementById("endgame_opp_logo").src=("./assets/img/logos/"+opp+".png");
+}
+
 function update_team_endseason(team){
   document.getElementById("endseason_logo").src=("./assets/img/logos/"+team+".png");
+}
+
+function update_score(){
+  rand = getRandomInt(9);
+  team_score = team_score_list[rand];
+  opp_score = team_score + 4
+  document.getElementById("team_score").innerHTML = team_score;
+  document.getElementById("opp_score").innerHTML = opp_score;
+  document.getElementById("endgame_team_score").innerHTML = team_score;
+  document.getElementById("endgame_opp_score").innerHTML = opp_score;
+  console.log(team_score);
+  console.log(opp_score);
 }
 
 
@@ -158,6 +189,7 @@ let team_prob_pass = JSON.parse(json_pass);
 // based on gametracker variable, update probabilities of each yardage gained by taking schedule[myteam_abbr][gametracker] to get probabilities for opposing team
 
 function reset_game(){
+  update_score();
   wins = 0;
   losses = 0;
   record = wins + '-' + losses;
@@ -179,6 +211,7 @@ function reset_game(){
   $( ".big_script" ).css( "margin-top", 0);
   $( ".big_script" ).css( "font-size", "36px");
   update_team_endseason(team_to_abbr[myTeam]);
+  update_opp_endgame(schedules[team_to_abbr[myTeam]][game_tracker]);
   update_team_endgame(team_to_abbr[myTeam]);
   update_team_endzone(team_to_abbr[myTeam]);
   update_opp_endzone(schedules[team_to_abbr[myTeam]][game_tracker]);
@@ -189,20 +222,12 @@ function reset_game(){
 }
 
 
-let down = 'First';
-let yard = 50;
-let yard_to_gain = 10;
-let play = 'normal';
-let random = Math.random();
-let last_play = '';
-let game_tracker = 0;
-let wins = 0;
-let losses = 0;
-let record = wins + '-' + losses;
+
 document.getElementById("down").innerHTML = down + " down and " + yard_to_gain + " from the " + yard;
 
 
 function next_game() {
+  update_score();
   record = wins + '-' + losses;
   document.getElementById("endgame_record").innerHTML = "Record: " + record;
   down = 'First';
@@ -221,6 +246,7 @@ function next_game() {
   $( ".big_script" ).css( "margin-top", 0);
   $( ".big_script" ).css( "font-size", "36px");
   update_team_endseason(team_to_abbr[myTeam]);
+  update_opp_endgame(schedules[team_to_abbr[myTeam]][game_tracker]);
   update_team_endgame(team_to_abbr[myTeam]);
   update_team_endzone(team_to_abbr[myTeam]);
   update_opp_endzone(schedules[team_to_abbr[myTeam]][game_tracker]);
@@ -410,7 +436,9 @@ function pass() {
       document.getElementById("down").innerHTML = last_play;
       document.getElementById("last_play").innerHTML = '';
       if (last_play == 'Touchdown!') {
+        document.getElementById("endgame_team_score").innerHTML = team_score+7;
         document.getElementById("endgame_message").innerHTML = "TOUCHDOWN!" + "<br />" + "YOU WIN.";
+        document.getElementById("final_game_message").innerHTML = "TOUCHDOWN! " + "YOU WIN.";
         game_tracker++;
         wins++;
         record = wins + '-' + losses;
@@ -424,6 +452,7 @@ function pass() {
         }
       } else {
         document.getElementById("endgame_message").innerHTML = last_play + "<br />" + 'You lose.';
+        document.getElementById("final_game_message").innerHTML = last_play + " You lose.";
         game_tracker++;
         losses++;
         record = wins + '-' + losses;
@@ -447,7 +476,9 @@ function pass() {
     document.getElementById("down").innerHTML = last_play;
     document.getElementById("last_play").innerHTML = '';
     if (last_play == 'Touchdown!') {
+      document.getElementById("endgame_team_score").innerHTML = team_score+7;
       document.getElementById("endgame_message").innerHTML = "TOUCHDOWN!" + "<br />" + "YOU WIN.";
+      document.getElementById("final_game_message").innerHTML = "TOUCHDOWN! " + "YOU WIN.";
       game_tracker++;
       wins++;
       record = wins + '-' + losses;
@@ -461,6 +492,7 @@ function pass() {
       }
     } else {
       document.getElementById("endgame_message").innerHTML = last_play + "<br />" + 'You lose.';
+      document.getElementById("final_game_message").innerHTML = last_play + " You lose.";
       game_tracker++;
       losses++;
       record = wins + '-' + losses;
@@ -657,7 +689,9 @@ function run() {
       document.getElementById("down").innerHTML = last_play;
       document.getElementById("last_play").innerHTML = '';
       if (last_play == 'Touchdown!') {
+        document.getElementById("endgame_team_score").innerHTML = team_score+7;
         document.getElementById("endgame_message").innerHTML = "TOUCHDOWN!" + "<br />" + "YOU WIN.";
+        document.getElementById("final_game_message").innerHTML = "TOUCHDOWN! " + "YOU WIN.";
         $(".endgame").css("display", "block");
         game_tracker++;
         wins++;
@@ -672,6 +706,7 @@ function run() {
         }
       } else {
         document.getElementById("endgame_message").innerHTML = last_play + "<br />" + 'You lose.';
+        document.getElementById("final_game_message").innerHTML = last_play + " You lose.";
         game_tracker++;
         losses++;
         record = wins + '-' + losses;
@@ -695,7 +730,9 @@ function run() {
     document.getElementById("down").innerHTML = last_play;
     document.getElementById("last_play").innerHTML = '';
     if (last_play == 'Touchdown!') {
+      document.getElementById("endgame_team_score").innerHTML = team_score+7;
       document.getElementById("endgame_message").innerHTML = "TOUCHDOWN!" + "<br />" + "YOU WIN.";
+      document.getElementById("final_game_message").innerHTML = "TOUCHDOWN! " + "YOU WIN.";
       game_tracker++;
       wins++;
       record = wins + '-' + losses;
@@ -709,6 +746,7 @@ function run() {
       }
     } else {
       document.getElementById("endgame_message").innerHTML = last_play + "<br />" + 'You lose.';
+      document.getElementById("final_game_message").innerHTML = last_play + " You lose.";
       game_tracker++;
       losses++;
       record = wins + '-' + losses;
