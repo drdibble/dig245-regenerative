@@ -784,3 +784,23 @@ function run() {
   }
 
 }
+
+jQuery(document).ready(function($) {
+  var alterClass = function() {
+    var ww = document.body.clientWidth;
+    if (ww < 600) {
+      $('.endgame_logo_container').removeClass('col-3');
+      $('.endgame_logo_container').addClass('col-6');
+      $('.empty_endgame').removeClass('col-3');
+    } else if (ww >= 601) {
+      $('.endgame_logo_container').removeClass('col-6');
+      $('.endgame_logo_container').addClass('col-3');
+      $('.empty_endgame').addClass('col-3');
+    };
+  };
+  $(window).resize(function(){
+    alterClass();
+  });
+  //Fire it when the page first loads:
+  alterClass();
+});
