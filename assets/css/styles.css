@@ -11,8 +11,8 @@ body {
   height: 100%;
 }
 
-.game_display {
-  opacity: 0;
+.gameplay {
+  display: none;
   background-color: #89D070;
   height: 100%;
 }
@@ -22,7 +22,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: white;
-  position: fixed;
+  position: absolute;
 }
 
 .endgame {
@@ -30,7 +30,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #89D070;
-  position: fixed;
+  position: absolute;
   display: none;
 }
 
@@ -39,7 +39,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #89D070;
-  position: fixed;
+  position: absolute;
   display: none;
 }
 
@@ -110,7 +110,7 @@ body {
 
 .endzone {
   background-color: #7284A8;
-  padding: 3px;
+  padding: 0.2vw;
 }
 
 #last_play, #down {
@@ -123,13 +123,13 @@ body {
   text-align: center;
   color: white;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 1.25vw;
 }
 
 #record {
   text-align: right;
   color: white;
-  font-size: 20px;
+  font-size: 1.25vw;
 }
 
 .center {
@@ -155,7 +155,7 @@ body {
 }
 
 .big_script {
-  font-size: 36px;
+  font-size: 2.25vw;
 }
 
 
@@ -163,47 +163,47 @@ body {
 #endgame_message {
   color: white;
   text-align: center;
-  font-size: 72px;
-  padding: 100px 0px 30px;
+  font-size: 4.5vw;
+  padding: 6vw 0vw 1.9vw;
 }
 
 .endgame_record {
   color: white;
   text-align: center;
-  font-size: 60px;
-  padding: 20px 0px 20px;
+  font-size: 3.75vw;
+  padding: 1.25vw 0vw 1.25vw;
 }
 
 #endseason_logo {
-  padding-top: 30px;
+  padding-top: 1.9vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  height: 20vh;
+  height: 14vw;
 }
 
 #endseason_message {
   color: white;
   text-align: center;
-  font-size: 96px;
-  padding: 100px 0px 30px;
+  font-size: 6vw;
+  padding: 6vw 0px 1.9vw;
 }
 
 #final_game_message {
   color: white;
   text-align: center;
-  font-size: 72px;
-  padding: 100px 0px 30px;
+  font-size: 4.5vw;
+  padding: 6vw 0px 1.9vw;
 }
 
 .scouting {
   background-color: white;
-  padding: 10px;
+  padding: 0.6vw;
 }
 
 .scouting_end {
-  padding-top: 40px;
+  padding-top: 2.5vw;
   background-color: white;
 }
 
@@ -219,7 +219,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  height: 10vh;
+  height: 8vw;
 }
 
 .endgame_logo {
@@ -227,32 +227,32 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  height: 15vh;
+  height: 8vw;
 }
 
 /* Tooltip container */
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  border-bottom: 0.06vw dotted black; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 7.5vw;
   background-color: #555;
   color: black;
   text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+  padding: 0.3vw 0;
+  border-radius: 0.4vw;
 
   /* Position the tooltip text */
   position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -3.75vw;
 
   /* Fade in tooltip */
   opacity: 0;
@@ -265,8 +265,8 @@ body {
   position: absolute;
   top: 100%;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
+  margin-left: -0.3vw;
+  border-width: 0.3vw;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }

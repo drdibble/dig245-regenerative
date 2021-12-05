@@ -98,7 +98,7 @@ for(let team in team_to_abbr) {
 document.getElementById('submit').addEventListener('click', function (event) {
     event.preventDefault();
     $('body').css("background-color", "#89D070");
-    $(".game_display").css("opacity", 1);
+    $(".gameplay").css("display", "block");
     $(".intro").css("display", "none");
     myTeam = select.options[select.selectedIndex].value;
     update_team_endseason(team_to_abbr[myTeam]);
@@ -115,17 +115,20 @@ document.getElementById('submit').addEventListener('click', function (event) {
 document.getElementById('next').addEventListener('click', function (event) {
     event.preventDefault();
     $(".endgame").css("display", "none");
+    $(".gameplay").css("display", "block");
 });
 
 document.getElementById('home').addEventListener('click', function (event) {
     event.preventDefault();
     $(".intro").css("display", "block");
     $(".end_season").css("display", "none");
+    $(".gameplay").css("display", "none");
 });
 
 document.getElementById('start_over').addEventListener('click', function (event) {
     event.preventDefault();
     $(".intro").css("display", "block");
+    $(".gameplay").css("display", "none");
     reset_game();
 });
 
@@ -447,8 +450,10 @@ function pass() {
         if(game_tracker == 17){
           document.getElementById("end_season_message").innerHTML = 'Final Record: ' + record;
           $(".end_season").css("display", "block");
+          $(".gameplay").css("display", "none");
         } else {
           $(".endgame").css("display", "block");
+          $(".gameplay").css("display", "none");
         }
       } else {
         document.getElementById("endgame_message").innerHTML = last_play + "<br />" + 'You lose.';
@@ -461,8 +466,10 @@ function pass() {
         if(game_tracker == 17){
           document.getElementById("end_season_message").innerHTML = 'Final Record: ' + record;
           $(".end_season").css("display", "block");
+          $(".gameplay").css("display", "none");
         } else {
           $(".endgame").css("display", "block");
+          $(".gameplay").css("display", "none");
         }
       }
 
@@ -487,8 +494,10 @@ function pass() {
       if(game_tracker == 17){
         document.getElementById("end_season_message").innerHTML = 'Final Record: ' + record;
         $(".end_season").css("display", "block");
+        $(".gameplay").css("display", "none");
       } else {
         $(".endgame").css("display", "block");
+        $(".gameplay").css("display", "none");
       }
     } else {
       document.getElementById("endgame_message").innerHTML = last_play + "<br />" + 'You lose.';
@@ -501,8 +510,10 @@ function pass() {
       if(game_tracker == 17){
         document.getElementById("end_season_message").innerHTML = 'Final Record: ' + record;
         $(".end_season").css("display", "block");
+        $(".gameplay").css("display", "none");
       } else {
         $(".endgame").css("display", "block");
+        $(".gameplay").css("display", "none");
       }
     }
     $( ".big_script" ).css( "margin-top", "10%");
@@ -692,7 +703,7 @@ function run() {
         document.getElementById("endgame_team_score").innerHTML = team_score+7;
         document.getElementById("endgame_message").innerHTML = "TOUCHDOWN!" + "<br />" + "YOU WIN.";
         document.getElementById("final_game_message").innerHTML = "TOUCHDOWN! " + "YOU WIN.";
-        $(".endgame").css("display", "block");
+        $(".gameplay").css("display", "none");
         game_tracker++;
         wins++;
         record = wins + '-' + losses;
@@ -701,8 +712,10 @@ function run() {
         if(game_tracker == 17){
           document.getElementById("end_season_message").innerHTML = 'Final Record: ' + record;
           $(".end_season").css("display", "block");
+          $(".gameplay").css("display", "none");
         } else {
           $(".endgame").css("display", "block");
+          $(".gameplay").css("display", "none");
         }
       } else {
         document.getElementById("endgame_message").innerHTML = last_play + "<br />" + 'You lose.';
@@ -715,8 +728,10 @@ function run() {
         if(game_tracker == 17){
           document.getElementById("end_season_message").innerHTML = 'Final Record: ' + record;
           $(".end_season").css("display", "block");
+          $(".gameplay").css("display", "none");
         } else {
           $(".endgame").css("display", "block");
+          $(".gameplay").css("display", "none");
         }
       }
       $( ".big_script" ).css( "margin-top", "10px");
@@ -741,8 +756,10 @@ function run() {
       if(game_tracker == 17){
         document.getElementById("end_season_message").innerHTML = 'Final Record: ' + record;
         $(".end_season").css("display", "block");
+        $(".gameplay").css("display", "none");
       } else {
         $(".endgame").css("display", "block");
+        $(".gameplay").css("display", "none");
       }
     } else {
       document.getElementById("endgame_message").innerHTML = last_play + "<br />" + 'You lose.';
@@ -755,8 +772,10 @@ function run() {
       if(game_tracker == 17){
         document.getElementById("end_season_message").innerHTML = 'Final Record: ' + record;
         $(".end_season").css("display", "block");
+        $(".gameplay").css("display", "none");
       } else {
         $(".endgame").css("display", "block");
+        $(".gameplay").css("display", "none");
       }
     }
 
