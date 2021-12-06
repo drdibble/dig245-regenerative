@@ -123,6 +123,11 @@ body {
   height: 40vw;
 }
 
+#field {
+  max-height: 75vh;
+  min-height: 70vh;
+}
+
 .endzone {
   background-color: #7284A8;
   padding: 0.2vw;
