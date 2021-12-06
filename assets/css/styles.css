@@ -52,7 +52,7 @@ body {
 
 .title_descriptor {
   text-align: center;
-  font-size: 1.9vw;
+  font-size: 3vw;
 }
 
 #selectTeam {
@@ -61,7 +61,7 @@ body {
 
 .form-group {
   text-align: center;
-  font-size: 1.2vw;
+  font-size: 3vw;
 }
 
 #submit {
@@ -104,8 +104,8 @@ body {
 }
 
 #coach {
-  width: 23vw;
-  height: 23vw;
+  width: 40vw;
+  height: 40vw;
 }
 
 .endzone {
@@ -303,6 +303,21 @@ body {
     text-align: center;
     font-size: 6vw;
     padding: 6vw 0vw 4vw;
+  }
+
+  .form-group {
+    text-align: center;
+    font-size: 1.2vw;
+  }
+
+  .title_descriptor {
+    text-align: center;
+    font-size: 2vw;
+  }
+
+  #coach {
+    width: 23vw;
+    height: 23vw;
   }
 
 }
