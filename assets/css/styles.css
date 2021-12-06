@@ -130,7 +130,7 @@ body {
 
 #last_play, #down {
   color: white;
-  font-size: 3.1vw;
+  font-size: 2.9vw;
 }
 
 .play_text {
@@ -208,13 +208,6 @@ body {
   font-size: 4.5vw;
   padding: 6vw 0px 1.9vw;
 }
-
-/* #final_game_message {
-  color: white;
-  text-align: center;
-  font-size: 4.5vw;
-  padding: 6vw 0px 1.9vw;
-} */
 
 .center_img {
   display: block;
@@ -349,6 +342,11 @@ body {
 
   .belichick_mobile {
     display: none;
+  }
+
+  #last_play, #down {
+    color: white;
+    font-size: 3.1vw;
   }
 
 }
