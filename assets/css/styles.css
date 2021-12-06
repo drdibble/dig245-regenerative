@@ -103,7 +103,21 @@ body {
   border: 0.125vw solid #7284A8;
 }
 
+.belichick {
+  display: none;
+}
+
+.belichick_mobile {
+  display: block;
+  padding-bottom: 4vw;
+}
+
 #coach {
+  width: 40vw;
+  height: 40vw;
+}
+
+#coach_mobile {
   width: 40vw;
   height: 40vw;
 }
@@ -318,6 +332,14 @@ body {
   #coach {
     width: 23vw;
     height: 23vw;
+  }
+
+  .belichick {
+    display: block;
+  }
+
+  .belichick_mobile {
+    display: none;
   }
 
 }

@@ -796,9 +796,9 @@ jQuery(document).ready(function($) {
       // intro message
       $('.intro_left').removeClass('col-3');
       $('.intro_left').removeClass('offset-3');
-      $('.intro_left').addClass('col-6');
-      $('.belichick').removeClass('col-3');
-      $('.belichick').addClass('col-6');
+      $('.intro_left').addClass('col-12');
+      // $('.belichick').removeClass('col-3');
+      // $('.belichick').addClass('col-6');
       // $('.belichick').addClass('center_img');
     } else if (ww >= 768) {
       // endgame message
@@ -806,11 +806,11 @@ jQuery(document).ready(function($) {
       $('.endgame_logo_container').addClass('col-3');
       $('.empty_endgame').addClass('col-3');
       // intro message
-      $('.intro_left').removeClass('col-6');
+      $('.intro_left').removeClass('col-12');
       $('.intro_left').addClass('col-3');
       $('.intro_left').addClass('offset-3');
-      $('.belichick').removeClass('col-6');
-      $('.belichick').addClass('col-3');
+      // $('.belichick').removeClass('col-6');
+      // $('.belichick').addClass('col-3');
       // $('.belichick').removeClass('center_img');
     };
   };
