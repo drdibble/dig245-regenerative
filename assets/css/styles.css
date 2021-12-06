@@ -46,7 +46,7 @@ body {
 .title {
   color: #89D070;
   text-align: center;
-  font-size: 6vw;
+  font-size: 8vw;
   padding: 6vw 0vw 4vw;
 }
 
@@ -281,7 +281,7 @@ body {
     font-size: 7.5vw;
     padding: 1.25vw 0vw 1.25vw;
   }
-  
+
   .center_logo {
     display: block;
     margin-left: auto;
@@ -298,6 +298,13 @@ body {
     height: 12vw;
   }
 
+  .title {
+    color: #89D070;
+    text-align: center;
+    font-size: 6vw;
+    padding: 6vw 0vw 4vw;
+  }
+
 }
 
 /* size l, xl */
@@ -305,14 +312,14 @@ body {
   #endgame_message {
     color: white;
     text-align: center;
-    font-size: 4.9vw;
-    padding: 6vw 0vw 1.9vw;
+    font-size: 4.6vw;
+    padding: 3.5vw 0vw 1.9vw;
   }
 
   .endgame_record {
     color: white;
     text-align: center;
-    font-size: 4.9vw;
+    font-size: 4.6vw;
     padding: 1.25vw 0vw 1.25vw;
   }
 }

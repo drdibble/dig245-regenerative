@@ -789,13 +789,32 @@ jQuery(document).ready(function($) {
   var alterClass = function() {
     var ww = document.body.clientWidth;
     if (ww < 767) {
+      // endgame message
       $('.endgame_logo_container').removeClass('col-3');
       $('.endgame_logo_container').addClass('col-6');
       $('.empty_endgame').removeClass('col-3');
+      // intro message
+      $('.intro_left').removeClass('col-3');
+      $('.intro_left').removeClass('offset-3');
+      $('.intro_left').addClass('col-5');
+      $('.intro_left').addClass('offset-1');
+      $('.belichick').removeClass('col-3');
+      $('.belichick').addClass('col-6');
+      // $('.belichick').addClass('center_img');
     } else if (ww >= 768) {
+      // endgame message
       $('.endgame_logo_container').removeClass('col-6');
       $('.endgame_logo_container').addClass('col-3');
       $('.empty_endgame').addClass('col-3');
+      // intro message
+      $('.intro_left').removeClass('col-6');
+      $('.intro_left').addClass('col-3');
+      $('.intro_left').addClass('offset-3');
+      $('.intro_left').removeClass('col-5');
+      $('.intro_left').removeClass('offset-1');
+      $('.belichick').removeClass('col-6');
+      $('.belichick').addClass('col-3');
+      // $('.belichick').removeClass('center_img');
     };
   };
   $(window).resize(function(){
