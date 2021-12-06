@@ -186,13 +186,20 @@ body {
   padding: 1.25vw 0vw 1.25vw;
 }
 
+#final_game_message {
+  color: white;
+  text-align: center;
+  font-size: 7.5vw;
+  padding: 1.25vw 0vw 1.25vw;
+}
+
 #endseason_logo {
   padding-top: 1.9vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  height: 14vw;
+  height: 18vw;
 }
 
 #endseason_message {
@@ -202,12 +209,12 @@ body {
   padding: 6vw 0px 1.9vw;
 }
 
-#final_game_message {
+/* #final_game_message {
   color: white;
   text-align: center;
   font-size: 4.5vw;
   padding: 6vw 0px 1.9vw;
-}
+} */
 
 .center_img {
   display: block;
@@ -290,7 +297,7 @@ body {
     padding: 6vw 0vw 1.9vw;
   }
 
-  .endgame_record {
+  .endgame_record, #final_game_message {
     color: white;
     text-align: center;
     font-size: 7.5vw;
@@ -355,7 +362,7 @@ body {
     padding: 3.5vw 0vw 1.9vw;
   }
 
-  .endgame_record {
+  .endgame_record, #final_game_message {
     color: white;
     text-align: center;
     font-size: 4.6vw;
